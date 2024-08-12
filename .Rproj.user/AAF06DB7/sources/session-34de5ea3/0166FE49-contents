@@ -1,9 +1,0 @@
-json_data <- jsonlite::fromJSON("/Users/thomasmayr/Economica/IV-Indikatorenpool_Dashboard_neu/IV-Indikatorenpool/Datenaufbereitung/Industrie/STATcube/sc_abfrage_industrie.json", simplifyVector = FALSE)
-
-schema_db <- sc_schema_db(json_data$database, language = "de")
-
-new_path <- sc_update_json_abfrage(
-  json_path = "/Users/thomasmayr/R/packages/sc_abfrage_industrie.json",
-  time_valueset_id = "str:valueset:delse21_arb:F-DATA:C-A10-0:C-A10-0",
-  time_field_id = "str:field:delse21_arb:F-DATA:C-A10-0"
-)
