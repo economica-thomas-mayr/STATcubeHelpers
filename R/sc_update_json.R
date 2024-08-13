@@ -14,7 +14,7 @@
 #'
 sc_update_json_abfrage <- function(json_path, time_valueset_id, time_field_id, new_file = TRUE) {
   if (sc_key_exists() == FALSE) {
-    stop("Error: STATcube-Schlüssel festlegen mit 'sc_key_set()'. Der Schlüssel ist ersichtlich nach Login und Öffnen des STATcube-Portals im Menü 'Benutzerkonto' unter der Überschrift 'Open Data API-Schlüssel'.")
+    stop("Error: STATcube-Schluessel festlegen mit 'sc_key_set()'. Der Schluessel ist ersichtlich nach Login und Oeffnen des STATcube-Portals im Menue 'Benutzerkonto' unter der Ueberschrift 'Open Data API-Schluessel'.")
   }
   # JSON-Datei einlesen
   json_data <- fromJSON(json_path, simplifyVector = FALSE)

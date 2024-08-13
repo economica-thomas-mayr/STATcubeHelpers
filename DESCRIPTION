@@ -1,12 +1,11 @@
 Package: STATcubeHelpers
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Helferfunktionen für STATcubeR
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+Author: Thomas Mayr
+Maintainer: Thomas Mayr <thomas.mayr98@gmail.com>
+Description: Dient im Moment dazu Datenabfragen mit zeitlich aktuellsten Daten zu aktualisieren.
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Imports: 
@@ -14,5 +13,5 @@ Imports:
     STATcubeR (>= 0.5.2),
     tools
 Remotes: 
-    gitlab::statistikat/STATcubeR
+    statistikat/STATcubeR
 RoxygenNote: 7.3.2
