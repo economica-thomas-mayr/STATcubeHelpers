@@ -15,6 +15,20 @@ remotes::install_github("economica-thomas-mayr/STATcubeHelpers")
 
 Nachdem die gewünschte Tabelle auf der STATcube-Plattform erstellt wurde, die Tabelle als API-Abfrage im JSON-Format downloaden.
 
+<img width="1721" alt="statcube_api_abfrage" src="https://github.com/user-attachments/assets/70724e68-6166-4d44-9210-c6a6df55c953">
+
+Um die Abfrage zu ermöglichen müssen zuerst die notwendigen Packages geladen werden und dann der STATcube-API-Schlüssel festgelegt werden. Der Schlüssel im Beispiel ("abc") ist nicht real und muss mit einem echten Schlüssel ersetzt werden. Der Schlüssel ist ersichtlich nach Login und Öffnen des STATcube-Portals im Menü 'Benutzerkonto' unter der Überschrift 'Open Data API-Schlüssel'.
+
+```r
+# Packages laden
+library(STATcubeR)
+library(STATcubeHelpers)
+library(jsonlite)
+
+# STATcube-API-Schlüssel festlegen
+sc_key_set("abc")
+```
+
 Nun müssen IDs für das Zeit-valueset und Zeit-field identifiziert werden, um die Aktualisierung zu ermöglichen.
 
 Hier kann folgendermaßen vorgegangen werden:
@@ -39,6 +53,10 @@ View(schema)
 Das Schema sollte nun als aufklappbare, verschachtelte Liste aufscheinen. Typischerweise ist das Zeitfeld zu finden etwa unter dem Namen "Zeit (Mussfeld)" (kann möglicherweise auch anders heißen, ist im Normalfall aber leicht eindeutig identifizierbar).
 
 Nun muss gesucht werden nach den IDs für das Zeit-valueset und für das Zeit-field.
+
+<img width="958" alt="zeit_field" src="https://github.com/user-attachments/assets/bc970cd2-1a59-4e3b-ae95-d51389bf3f04">
+
+<img width="958" alt="zeit_valueset" src="https://github.com/user-attachments/assets/25c7b968-c599-437b-b675-2fb6050c1d4a">
 
 Im Beispiel wären das: `"str:valueset:devgrrgr104:F-DATA:C-A10-0:C-A10-0"` und `"str:field:devgrrgr104:F-DATA:C-A10-0"`.
 
