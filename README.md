@@ -11,6 +11,8 @@ Dieses Package kann mit Hilfe des `{remotes}` Package installiert werden. Dazu e
 remotes::install_github("economica-thomas-mayr/STATcubeHelpers")
 ```
 
+Da dieses Package eine Erweiterung des Package `STATcubeR` darstellt, ist eine Installation davon ebenfalls notwendig. Normalerweise sollte diese Installation automatisch stattfinden, alternativ kann auch die Anleitung des Packages dafür herangezogen werden: <a href=https://github.com/statistikat/STATcubeR>https://github.com/statistikat/STATcubeR</a>. Dort ist auch eine ausführliche Dokumentation abrufbar, um mit der STATcube-API selbst vertraut zu werden.
+
 ## Anleitung
 
 Nachdem die gewünschte Tabelle auf der STATcube-Plattform erstellt wurde, die Tabelle als API-Abfrage im JSON-Format downloaden.
