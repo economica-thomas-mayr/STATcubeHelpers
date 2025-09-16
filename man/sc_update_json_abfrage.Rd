@@ -2,13 +2,15 @@
 % Please edit documentation in R/sc_update_json.R
 \name{sc_update_json_abfrage}
 \alias{sc_update_json_abfrage}
-\title{Update der JSON-Datei für eine STATcube-Abfrage mit aktuellsten Daten}
+\title{Update der JSON-Datei fuer eine STATcube-Abfrage mit aktuellsten Daten}
 \usage{
 sc_update_json_abfrage(
   json_path,
   time_valueset_id,
   time_field_id,
-  new_file = TRUE
+  new_file = TRUE,
+  from_id = NULL,
+  latest_n = NULL
 )
 }
 \arguments{
@@ -18,11 +20,16 @@ sc_update_json_abfrage(
 
 \item{time_field_id}{ID des time_field}
 
-\item{new_file}{Neue JSON-Datei erstellen oder alte überschreiben}
+\item{new_file}{Neue JSON-Datei erstellen oder alte ueberschreiben}
+
+\item{from_id}{(Optional) ID der Zeitperiode, ab der alle folgenden Perioden uebernommen werden (inklusive).
+Empfohlen: zuerst \code{sc_list_time_periods()} verwenden und daraus eine ID waehlen.}
+
+\item{latest_n}{(Optional) nur die letzten n Zeitperioden behalten (nachdem \code{from_id} angewendet wurde)}
 }
 \value{
-Pfad der neuen JSON-Datei falls new_file = TRUE
+Pfad der neuen JSON-Datei falls new_file = TRUE, sonst NULL (invisible)
 }
 \description{
-Update der JSON-Datei für eine STATcube-Abfrage mit aktuellsten Daten
+Update der JSON-Datei fuer eine STATcube-Abfrage mit aktuellsten Daten
 }
